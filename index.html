@@ -1,15 +1,49 @@
 <!DOCTYPE html>
 <html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/main.css">
-</head>
-<body>
-    
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./css/main.css" />
+	</head>
+	<body>
+		<div class="app">
+			<div class="app__title">
+				<span>spli</span>
+				<span>tter</span>
+			</div>
 
+			<div class="app__body">
+				<div class="app__body--left">
+					<div class="bill">
+						<p class="bill__title">Bill</p>
+						<div class="bill__box">
+							<p class="bill__box--sign">$</p>
+							<p class="bill__box--price">142.55</p>
+						</div>
+					</div>
+					<div class="tip">
+						<p class="tip__title">Select Tip %</p>
+						<div class="tip__btn">
+							<button class="tip__btn--percent">5%</button>
+							<button class="tip__btn--percent">10%</button>
+							<button class="tip__btn--percent">15%</button>
+							<button class="tip__btn--percent">25%</button>
+							<button class="tip__btn--percent">50%</button>
+							<button class="tip__btn--custom">Custom</button>
+						</div>
+					</div>
+                    <div class="people">
+                        <p class="people__title">Number of People</p>
+                        <div class="people__box">
+                            <p class="people__box--sign">😀</p>
+							<p class="people__box--price">5</p>
+                        </div>
+                    </div>
+				</div>
+			</div>
+		</div>
 
-    <script src="./dist/js/app.js"></script>
-</body>
+		<script src="./dist/js/app.js"></script>
+	</body>
 </html>
