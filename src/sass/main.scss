@@ -45,6 +45,7 @@ input {
 	flex-direction: column;
 	text-align: right;
 	font-size: 2.4rem;
+	padding-right: 0.5em;
 	width: 50%;
 }
 
@@ -70,6 +71,7 @@ input {
 .app {
 	position: relative;
 	display: flex;
+	
 	width: 700px;
 	padding: 2em;
 	gap: 2em;
@@ -78,6 +80,33 @@ input {
 
 	&__left-side {
 		width: 50%;
+
+		.bill, .people {
+
+			&__title {
+				font-weight: 700;
+				color: var(--Dark-grayish-cyan);
+				padding-bottom: 0.2em;
+			}
+
+			&__box {
+				position: relative;
+				display: flex;
+
+				&--sign {
+					position: absolute;
+					top: 50%;
+					left: 5%;
+					transform: translate(-50%, -50%);
+				}
+
+				&--price {
+					width: 100%;
+					border: 1px solid var(--Light-grayish-cyan);
+					
+				}
+			}
+		}
 	}
 
 	&__right-side {

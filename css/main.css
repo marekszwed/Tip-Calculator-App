@@ -36,6 +36,7 @@ input {
   flex-direction: column;
   text-align: right;
   font-size: 2.4rem;
+  padding-right: 0.5em;
   width: 50%;
 }
 
@@ -67,6 +68,25 @@ input {
 }
 .app__left-side {
   width: 50%;
+}
+.app__left-side .bill__title, .app__left-side .people__title {
+  font-weight: 700;
+  color: var(--Dark-grayish-cyan);
+  padding-bottom: 0.2em;
+}
+.app__left-side .bill__box, .app__left-side .people__box {
+  position: relative;
+  display: flex;
+}
+.app__left-side .bill__box--sign, .app__left-side .people__box--sign {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translate(-50%, -50%);
+}
+.app__left-side .bill__box--price, .app__left-side .people__box--price {
+  width: 100%;
+  border: 1px solid var(--Light-grayish-cyan);
 }
 .app__right-side {
   width: 50%;
