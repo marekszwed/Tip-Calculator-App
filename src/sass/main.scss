@@ -11,9 +11,78 @@
 	--White: hsl(0, 0%, 100%);
 }
 
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
 body {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
+	font-family: 'Space Mono', monospace;
 	align-items: center;
+	background-color: var(--Light-grayish-cyan);
 	height: 100vh;
+	font-size: 1.6rem;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+// .num::-webkit-outer-spin-button,
+// .num::-webkit-inner-spin-button {
+// 	-webkit-appearance: none;
+// 	margin: 0;
+// }
+
+input {
+	display: flex;
+	flex-direction: column;
+	text-align: right;
+	font-size: 2.4rem;
+	width: 50%;
+}
+
+.title {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	top: 0;
+
+	margin: 5em auto;
+
+	span {
+		position: relative;
+		display: flex;
+		text-transform: uppercase;
+		font-size: 2.4rem;
+		font-weight: 700;
+		letter-spacing: 0.3em;
+		color: var(--Dark-grayish-cyan);
+	}
+}
+
+.app {
+	position: relative;
+	display: flex;
+	width: 700px;
+	padding: 2em;
+	gap: 2em;
+	border-radius: 1rem;
+	background-color: var(--White);
+
+	&__left-side {
+		width: 50%;
+	}
+
+	&__right-side {
+		width: 50%;
+		background-color: var(--Very-dark-cyan);
+		border-radius: 1rem;
+	}
 }
