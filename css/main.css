@@ -37,7 +37,9 @@ input {
   text-align: right;
   font-size: 2.4rem;
   padding-right: 0.5em;
+  padding: 0.2em 0.5em 0.2em 0;
   width: 50%;
+  cursor: pointer;
 }
 
 .title {
@@ -69,24 +71,61 @@ input {
 .app__left-side {
   width: 50%;
 }
-.app__left-side .bill__title, .app__left-side .people__title {
+.app__left-side .bill__title,
+.app__left-side .people__title {
   font-weight: 700;
   color: var(--Dark-grayish-cyan);
   padding-bottom: 0.2em;
 }
-.app__left-side .bill__box, .app__left-side .people__box {
+.app__left-side .bill__box,
+.app__left-side .people__box {
   position: relative;
   display: flex;
 }
-.app__left-side .bill__box--sign, .app__left-side .people__box--sign {
+.app__left-side .bill__box--sign,
+.app__left-side .people__box--sign {
   position: absolute;
   top: 50%;
   left: 5%;
   transform: translate(-50%, -50%);
 }
-.app__left-side .bill__box--price, .app__left-side .people__box--price {
+.app__left-side .bill__box--price,
+.app__left-side .people__box--price {
   width: 100%;
   border: 1px solid var(--Light-grayish-cyan);
+}
+.app__left-side .people__title {
+  margin-top: 2em;
+}
+.app__left-side .tip {
+  margin-top: 2em;
+}
+.app__left-side .tip__title {
+  font-weight: 700;
+  color: var(--Dark-grayish-cyan);
+  padding-bottom: 0.2em;
+}
+.app__left-side .tip__btn-first, .app__left-side .tip__btn-second {
+  position: relative;
+  margin-bottom: 0.8em;
+}
+.app__left-side .tip__btn-first--custom, .app__left-side .tip__btn-second--custom {
+  display: inline-block;
+  padding: 0;
+  text-align: center;
+}
+.app__left-side .tip__btn-first--custom::-moz-placeholder, .app__left-side .tip__btn-second--custom::-moz-placeholder {
+  font-size: 2rem;
+}
+.app__left-side .tip__btn-first--custom::placeholder, .app__left-side .tip__btn-second--custom::placeholder {
+  font-size: 2rem;
+}
+.app__left-side .tip__btn-first--percent, .app__left-side .tip__btn-first--custom, .app__left-side .tip__btn-second--percent, .app__left-side .tip__btn-second--custom {
+  font-size: 2.4rem;
+  width: 31%;
+  padding: 0.2em 0;
+  font-weight: 500;
+  cursor: pointer;
 }
 .app__right-side {
   width: 50%;
