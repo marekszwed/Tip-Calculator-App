@@ -34,8 +34,8 @@ html {
 	font-size: 62.5%;
 }
 
-// .num::-webkit-outer-spin-button,
-// .num::-webkit-inner-spin-button {
+// ::-webkit-outer-spin-button,
+// ::-webkit-inner-spin-button {
 // 	-webkit-appearance: none;
 // 	margin: 0;
 // }
@@ -73,7 +73,6 @@ input {
 .app {
 	position: relative;
 	display: flex;
-
 	width: 700px;
 	padding: 2em;
 	gap: 2em;
@@ -155,5 +154,61 @@ input {
 		width: 50%;
 		background-color: var(--Very-dark-cyan);
 		border-radius: 1rem;
+
+		.result {
+			position: relative;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 2em 1.5em 0em 1.5em;
+
+			&__title {
+				&--heading {
+					color: var(--White);
+					font-weight: 700;
+					font-size: 1.4rem;
+				}
+
+				&--person {
+					color: var(--Grayish-cyan);
+					font-weight: 700;
+					font-size: 1.4rem;
+				}
+			}
+
+			.amount-price {
+				font-weight: 700;
+				color: var(--Strong-cyan);
+				font-size: 3rem;
+			}
+
+			.total-price {
+				font-weight: 700;
+				color: var(--Strong-cyan);
+				font-size: 3rem;
+			}
+		}
+
+		.btn {
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100%;
+
+			&__reset {
+				width: 80%;
+				margin-bottom: 6em;
+				padding: 0.5em;
+				border-radius: 0.5rem;
+				border: none;
+				font-size: 1.6rem;
+				font-weight: 700;
+				text-transform: uppercase;
+				background-color: var(--Strong-cyan);
+				color: var(--Light-grayish-cyan);
+				cursor: pointer;
+			}
+		}
 	}
 }

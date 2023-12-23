@@ -131,4 +131,51 @@ input {
   width: 50%;
   background-color: var(--Very-dark-cyan);
   border-radius: 1rem;
+}
+.app__right-side .result {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2em 1.5em 0em 1.5em;
+}
+.app__right-side .result__title--heading {
+  color: var(--White);
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+.app__right-side .result__title--person {
+  color: var(--Grayish-cyan);
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+.app__right-side .result .amount-price {
+  font-weight: 700;
+  color: var(--Strong-cyan);
+  font-size: 3rem;
+}
+.app__right-side .result .total-price {
+  font-weight: 700;
+  color: var(--Strong-cyan);
+  font-size: 3rem;
+}
+.app__right-side .btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.app__right-side .btn__reset {
+  width: 80%;
+  margin-bottom: 6em;
+  padding: 0.5em;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: var(--Strong-cyan);
+  color: var(--Light-grayish-cyan);
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */
