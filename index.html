@@ -19,14 +19,18 @@
 		<div class="app">
 			<div class="app__left-side">
 				<div class="bill">
-					<p class="bill__title">Bill</p>
+					<div class="bill__text">
+						<p class="bill__text--title">Bill</p>
+						<p class="text-error">Can't be zero</p>
+					</div>
+					<!-- <p class="bill__title">Bill</p> -->
 					<div class="bill__box">
 						<img
 							src="./src/img/icon-dollar.svg"
 							class="bill__box--sign"
 							alt="Dollar icon"
 						/>
-						<input type="text" class="bill__box--price" placeholder="142.55" />
+						<input type="number" class="bill__box--price"  />
 					</div>
 				</div>
 				<div class="tip">
@@ -47,14 +51,19 @@
 					</div>
 				</div>
 				<div class="people">
-					<p class="people__title">Number of People</p>
+					<div class="people__text">
+						<p class="people__text--title">Number of People</p>
+						<p class="text-error">Can't be zero</p>
+					</div>
+					<!-- <p class="people__title">Number of People</p>
+					<p class="people__error">Can't be zero</p> -->
 					<div class="people__box">
 						<img
 							src="./src/img/icon-person.svg"
 							class="people__box--sign"
 							alt="person icon"
 						/>
-						<input type="text" class="people__box--price" placeholder="5" />
+						<input type="number" class="people__box--price" placeholder="" />
 					</div>
 				</div>
 			</div>
