@@ -40,17 +40,6 @@ html {
 // 	margin: 0;
 // }
 
-input {
-	display: flex;
-	flex-direction: column;
-	text-align: right;
-	font-size: 2.4rem;
-	padding-right: 0.5em;
-	padding: 0.2em 0.5em 0.2em 0;
-	width: 50%;
-	cursor: pointer;
-}
-
 .title {
 	position: relative;
 	display: flex;
@@ -81,15 +70,54 @@ input {
 	border-radius: 1rem;
 	background-color: var(--White);
 
+	input {
+		display: flex;
+		flex-direction: column;
+		text-align: right;
+		font-size: 2.4rem;
+		padding-right: 0.5em;
+		padding: 0.2em 0.5em 0.2em 0;
+		width: 50%;
+		border-radius: 0.5rem;
+		border-style: none;
+		cursor: pointer;
+	}
+
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+
+	input:focus {
+		outline: 2px solid var(--Strong-cyan);
+	}
+
+	.error {
+		outline: 2px solid red;
+	}
+
 	&__left-side {
 		width: 50%;
 
 		.bill,
 		.people {
-			&__title {
+			&__text {
+				position: relative;
+				display: flex;
+				justify-content: space-between;
+				padding-bottom: 0.2em;
 				font-weight: 700;
 				color: var(--Dark-grayish-cyan);
-				padding-bottom: 0.2em;
+
+				.text-error {
+					display: none;
+					color: red;
+				}
+
+				.active {
+					display: block;
+				}
 			}
 
 			&__box {
@@ -112,8 +140,18 @@ input {
 
 		.people {
 			margin-bottom: 1em;
+
 			&__title {
 				margin-top: 2em;
+			}
+
+			&__error {
+				position: absolute;
+				top: 18.1em;
+				left: 17.7em;
+				transform: translate(-50%, -50%);
+				font-size: 1.6rem;
+				margin: 0 auto;
 			}
 		}
 
@@ -131,10 +169,24 @@ input {
 				position: relative;
 				margin-bottom: 0.8em;
 
+				&--percent {
+					background-color: var(--Very-dark-cyan);
+					color: var(--White);
+				}
+
+				&--percent:hover {
+					background-color: var(--Strong-cyan);
+					color: var(--Very-dark-cyan);
+				}
+
 				&--custom {
 					display: inline-block;
 					padding: 0;
 					text-align: center;
+				}
+
+				&--custom:focus {
+					outline: 1px solid var(--Strong-cyan);
 				}
 
 				&--custom::placeholder {
@@ -149,6 +201,7 @@ input {
 					font-weight: 500;
 					border-radius: 0.5rem;
 					border: none;
+					transition: 0.2s all;
 					cursor: pointer;
 				}
 			}
