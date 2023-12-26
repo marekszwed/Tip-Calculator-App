@@ -1,19 +1,32 @@
-const billPrice: HTMLInputElement = document.querySelector('.bill__box--price');
-const peopleNumber: HTMLInputElement = document.querySelector('.people__box--price');
-const totalPrice: HTMLParagraphElement = document.querySelector('.amount-price');
-const amountPrice: HTMLParagraphElement = document.querySelector('.total-price');
-const discountBtn = document.querySelectorAll('.discount');
-const customBtn: HTMLInputElement = document.querySelector('.tip__btn-second--custom')
-const resetBtn: HTMLButtonElement = document.querySelector('.reset-btn');
-const app: HTMLElement = document.querySelector('.app')
+const billInput: HTMLInputElement = document.querySelector('#billPrice');
+const peopleInput: HTMLInputElement = document.querySelector('#peopleNumber');
+const buttons = document.querySelectorAll('.discount');
 
 
 
 
+const resetBtn: HTMLButtonElement = document.querySelector('.reset-btn')
 
+const showBill = () => {
+    const errors = document.querySelectorAll('.text-error');
 
-
-
-
+    if(billInput.value == '' && peopleInput.value == '') {
+        errors.forEach(error => { error.classList.add('active')})
+    } else {
+        countBill()
+        errors.forEach(error => { error.classList.remove('active')})
+    }
     
+}
 
+const countBill = () => {
+    let newBill = Number(billInput.value)
+    let newPeople = Number(peopleInput.value)
+
+
+}
+
+
+
+
+resetBtn.addEventListener('click', showBill)

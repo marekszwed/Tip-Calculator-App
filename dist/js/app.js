@@ -1,8 +1,19 @@
-const billPrice = document.querySelector('.bill__box--price');
-const peopleNumber = document.querySelector('.people__box--price');
-const totalPrice = document.querySelector('.amount-price');
-const amountPrice = document.querySelector('.total-price');
-const discountBtn = document.querySelectorAll('.discount');
-const customBtn = document.querySelector('.tip__btn-second--custom');
+const billInput = document.querySelector('#billPrice');
+const peopleInput = document.querySelector('#peopleNumber');
+const buttons = document.querySelectorAll('.discount');
 const resetBtn = document.querySelector('.reset-btn');
-const app = document.querySelector('.app');
+const showBill = () => {
+    const errors = document.querySelectorAll('.text-error');
+    if (billInput.value == '' && peopleInput.value == '') {
+        errors.forEach(error => { error.classList.add('active'); });
+    }
+    else {
+        countBill();
+        errors.forEach(error => { error.classList.remove('active'); });
+    }
+};
+const countBill = () => {
+    let newBill = Number(billInput.value);
+    let newPeople = Number(peopleInput.value);
+};
+resetBtn.addEventListener('click', showBill);
