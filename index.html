@@ -30,23 +30,24 @@
 							class="bill__box--sign"
 							alt="Dollar icon"
 						/>
-						<input type="text" class="bill__box--price" id="billPrice" value=""/>
+						<input type="text" class="bill__box--price price" id="billPrice" placeholder="0"/>
 					</div>
 				</div>
 				<div class="tip">
 					<p class="tip__title">Select Tip %</p>
 					<div class="tip__btn-first">
-						<button class="tip__btn-first--percent discount">5%</button>
-						<button class="tip__btn-first--percent discount">10%</button>
-						<button class="tip__btn-first--percent discount">15%</button>
+						<button class="tip__btn-first--percent discount" value="0.05">5%</button>
+						<button class="tip__btn-first--percent discount" value="0.1">10%</button>
+						<button class="tip__btn-first--percent discount" value="0.15">15%</button>
 					</div>
 					<div class="tip__btn-second">
-						<button class="tip__btn-second--percent discount">25%</button>
-						<button class="tip__btn-second--percent discount">50%</button>
+						<button class="tip__btn-second--percent discount" value="0.25">25%</button>
+						<button class="tip__btn-second--percent discount" value="0.5">50%</button>
 						<input
-							type="text"
+							type="number"
 							class="tip__btn-second--custom"
 							placeholder="Custom"
+							id="custom"
 						/>
 					</div>
 				</div>
@@ -63,7 +64,7 @@
 							class="people__box--sign"
 							alt="person icon"
 						/>
-						<input type="number" class="people__box--price" id="peopleNumber" />
+						<input type="number" class="people__box--price price" id="peopleNumber" placeholder="1" />
 					</div>
 				</div>
 			</div>
