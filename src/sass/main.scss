@@ -168,7 +168,7 @@ html {
 				padding-bottom: 0.2em;
 			}
 
-			&__btn-first,
+			&__btn-first, 
 			&__btn-second {
 				position: relative;
 				margin-bottom: 0.8em;
@@ -178,7 +178,12 @@ html {
 					color: var(--White);
 				}
 
-				&--percent:focus {
+				// &--percent:focus {
+				// 	background-color: var(--Strong-cyan);
+				// 	color: var(--Very-dark-cyan);
+				// }
+
+				.show {
 					background-color: var(--Strong-cyan);
 					color: var(--Very-dark-cyan);
 				}

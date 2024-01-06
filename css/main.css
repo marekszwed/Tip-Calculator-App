@@ -149,7 +149,7 @@ html {
   background-color: var(--Very-dark-cyan);
   color: var(--White);
 }
-.app__left-side .tip__btn-first--percent:focus, .app__left-side .tip__btn-second--percent:focus {
+.app__left-side .tip__btn-first .show, .app__left-side .tip__btn-second .show {
   background-color: var(--Strong-cyan);
   color: var(--Very-dark-cyan);
 }
