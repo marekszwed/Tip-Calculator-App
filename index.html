@@ -21,7 +21,7 @@
 				<div class="bill">
 					<div class="bill__text">
 						<p class="bill__text--title">Bill</p>
-						<p class="text-error">Can't be zero</p>
+						<p class="bill-error">Can't be zero</p>
 					</div>
 					<!-- <p class="bill__title">Bill</p> -->
 					<div class="bill__box">
@@ -30,7 +30,7 @@
 							class="bill__box--sign"
 							alt="Dollar icon"
 						/>
-						<input type="text" class="bill__box--price price" id="billPrice" placeholder="0"/>
+						<input type="number" class="bill__box--price" id="billPrice" placeholder="0"/>
 					</div>
 				</div>
 				<div class="tip">
@@ -38,7 +38,7 @@
 					<div class="tip__btn-first">
 						<button class="tip__btn-first--percent discount" value="5" >5%</button>
 						<button class="tip__btn-first--percent discount" value="10" >10%</button>
-						<button class="tip__btn-first--percent discount" value="15" >15%</button>
+						<button class="tip__btn-first--percent discount show" value="15" >15%</button>
 					</div>
 					<div class="tip__btn-second">
 						<!-- <button class="tip__btn-second--percent discount" value="0.25" >25%</button>
@@ -57,7 +57,7 @@
 				<div class="people">
 					<div class="people__text">
 						<p class="people__text--title">Number of People</p>
-						<p class="text-error">Can't be zero</p>
+						<p class="people-error">Can't be zero</p>
 					</div>
 					<!-- <p class="people__title">Number of People</p>
 					<p class="people__error">Can't be zero</p> -->
@@ -67,7 +67,8 @@
 							class="people__box--sign"
 							alt="person icon"
 						/>
-						<input type="number" class="people__box--price price" id="peopleNumber" placeholder="1" />
+						<!-- zlikwidowano klasę price z inputa people oraz bill -->
+						<input type="number" class="people__box--price" id="peopleNumber" placeholder="1" />
 					</div>
 				</div>
 			</div>
@@ -78,14 +79,14 @@
 						<p class="result__title--heading">Tip Amount</p>
 						<p class="result__title--person">/ Person</p>
 					</div>
-					<p class="amount-price">$0.00</p>
+					<div class="amount-price">$0.00</div>
 				</div>
 				<div class="result">
 					<div class="result__title">
 						<p class="result__title--heading">Total</p>
 						<p class="result__title--person">/ Person</p>
 					</div>
-					<p class="total-price">$0.00</p>
+					<div class="total-price">$0.00</div>
 				</div>
 				<!-- <div class="btn">
 					<button class="btn__reset">reset</button>
