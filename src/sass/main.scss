@@ -34,12 +34,6 @@ html {
 	font-size: 62.5%;
 }
 
-// ::-webkit-outer-spin-button,
-// ::-webkit-inner-spin-button {
-// 	-webkit-appearance: none;
-// 	margin: 0;
-// }
-
 .title {
 	position: relative;
 	display: flex;
@@ -47,7 +41,6 @@ html {
 	top: 0;
 	left: 0;
 	right: 0;
-
 	margin: 2em auto;
 
 	span {
@@ -110,7 +103,8 @@ html {
 				font-weight: 700;
 				color: var(--Dark-grayish-cyan);
 
-				.text-error {
+				.bill-error, 
+				.people-error {
 					display: none;
 					color: red;
 				}
@@ -118,10 +112,7 @@ html {
 				.active {
 					display: block;
 				}
-
-				
-
-				
+	
 			}
 
 			&__box {

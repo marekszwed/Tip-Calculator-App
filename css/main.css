@@ -93,8 +93,10 @@ html {
   font-weight: 700;
   color: var(--Dark-grayish-cyan);
 }
-.app__left-side .bill__text .text-error,
-.app__left-side .people__text .text-error {
+.app__left-side .bill__text .bill-error,
+.app__left-side .bill__text .people-error,
+.app__left-side .people__text .bill-error,
+.app__left-side .people__text .people-error {
   display: none;
   color: red;
 }
