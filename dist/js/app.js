@@ -1,3 +1,4 @@
+'use strict';
 // Inputs
 const billInput = document.querySelector('#billPrice');
 const peopleInput = document.querySelector('#peopleNumber');
@@ -30,32 +31,6 @@ PercentButtons.forEach((btn) => {
         countBill();
     });
 });
-const showBill = () => {
-    // if(Number(billInput.value) == 0 || Number(peopleInput.value) == 0) {
-    // 	allInput.forEach((input) => {input.classList.add('error')})
-    // } else if (){
-    // 	allInput.forEach((input) => {input.classList.remove('error')})
-    // 	countBill()
-    // }
-    console.log(Number(billInput.value));
-    console.log(Number(peopleInput.value));
-    if (Number(billInput.value) == 0 || Number(peopleInput.value) == 0) {
-        billError.classList.add('active');
-        peopleInput.classList.add('active');
-    }
-    else if (Number(billInput.value) !== 0 || Number(peopleInput.value) == 0) {
-        billError.classList.remove('active');
-        peopleInput.classList.add('active');
-    }
-    else if (Number(billInput.value) == 0 || Number(peopleInput.value) !== 0) {
-        billError.classList.add('active');
-        peopleInput.classList.remove('active');
-    }
-    else {
-        billError.classList.remove('active');
-        peopleInput.classList.remove('active');
-    }
-};
 // calculate the tip
 function countBill() {
     const billValue = parseFloat(billInput.value);
@@ -71,10 +46,6 @@ function countBill() {
     totalTip.textContent = `$${totalPrice}`;
     amountTip.textContent = `$${priceAmountPerPerson}`;
 }
-// const checkValue = (value) => {
-// 	const regex = /^[0-9]+$/;
-//   return regex.test(value);
-// }
 // AddEventListeners
 resetBtn.addEventListener('click', () => {
     billInput.value = '';
@@ -85,6 +56,26 @@ resetBtn.addEventListener('click', () => {
     billError.textContent = '';
     peopleError.textContent = '';
 });
-billInput.addEventListener('keyup', showBill);
-peopleInput.addEventListener('keyup', showBill);
-customInput.addEventListener('keyup', showBill);
+billInput.addEventListener('keydown', () => {
+    if (billInput.value == '') {
+        billInput.classList.add('error');
+        billError.classList.add('active');
+    }
+    else {
+        billInput.classList.remove('error');
+        billError.classList.remove('active');
+    }
+});
+peopleInput.addEventListener('keydown', () => {
+    if (peopleInput.value == '') {
+        peopleInput.classList.add('error');
+        peopleError.classList.add('active');
+    }
+    else {
+        peopleInput.classList.remove('error');
+        peopleError.classList.remove('active');
+    }
+});
+billInput.addEventListener('keyup', countBill);
+peopleInput.addEventListener('keyup', countBill);
+customInput.addEventListener('keyup', countBill);
